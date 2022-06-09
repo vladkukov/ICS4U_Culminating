@@ -1,0 +1,5 @@
+LEGEND:
+Username
+Product ID
+Num rating out of 10
+Comments

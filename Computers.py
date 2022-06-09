@@ -6,7 +6,6 @@ def __init__(self, modelNum, manufacturer, ramSize, storage, processorSpeed, pri
     self.processorSpeed = processorSpeed
     self.price = price
 
-"""
+
 def getModelNum(self):
     return self.modelNum
-"""
