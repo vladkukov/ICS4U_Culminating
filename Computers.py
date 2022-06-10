@@ -1,4 +1,5 @@
-def __init__(self, modelNum, manufacturer, ramSize, storage, processorSpeed, price):
+def __init__(self, name, modelNum, manufacturer, ramSize, storage, processorSpeed, price):
+    self.name = name
     self.modelNum = modelNum
     self.manufacturer = manufacturer
     self.ramSize = ramSize
@@ -7,5 +8,3 @@ def __init__(self, modelNum, manufacturer, ramSize, storage, processorSpeed, pri
     self.price = price
 
 
-def getModelNum(self):
-    return self.modelNum
