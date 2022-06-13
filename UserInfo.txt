@@ -1,29 +1,19 @@
-Legend:
-Name
-Email
-Username
-Password
-
 Joe Jackson
 joejackson24@gmail.com
 jjackson
 password221
-
 Harold Hamilton
 haroldiscool@outlook.com
 haroldthegoat
 iamaballer
-
 Peter Peterson
 wolfilovewolves@apple.com
 peterr
 idontknow
-
 Iris Ingle
 savethetreesh@yahoo.com
 irisliketheeye
 yellowpurple
-
 Tina Tucker
 popsmokeisthebestwooo@icloud.com
 tinathet
