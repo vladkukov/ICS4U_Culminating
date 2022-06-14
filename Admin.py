@@ -1,7 +1,8 @@
 from User import User
 
-class Admin:
+class Admin(User):
     def __init__(self, username, password, name, email, userInfo):
+        User.__init__(self, username, password, name, email)
         self.username = username
         self.password = password
         self.name = name
@@ -22,6 +23,7 @@ class Admin:
 
         for i in range((len(lists[1]))-1):
             self.userList.append(User(lists[0][i], lists[1][i], lists[2][i], lists[3][i]))
+
 
 
 
