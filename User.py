@@ -1,5 +1,6 @@
 from abc import abstractmethod
 
+
 class User:
     def __init__(self, name="", email="", username="", password=""):
         self.username = username
@@ -14,40 +15,35 @@ class User:
         return self.password
 
     def login(self, userList):
+        password = None
         self.email = input("Enter your email: ")
         for x in userList:
             if self.email == x.email:
-                password = input("Enter your password: ")
-                if password == x.password:
-                    print("nice")
-                    return True
-                else:
-                    print("wrong password")
-                    return False
-            else:
-                self.createAccount(self.email)
+                while password != x.password:
+                    password = input("Enter your password: ")
+                    if password != x.password:
+                        print("wrong password")
+                print("right password")
+                return True, x
+        print("Email not found, please create an account \n")
+        return False, None
 
     @abstractmethod
     def addNewUser(self, name, email, username, password):
         pass
 
-    def createAccount(self, email):
+    def createAccount(self):
+        self.email = input("Enter your email: ")
         self.name = input("Enter your name: ")
         self.username = input("Create a username: ")
         self.password = input("Create a password: ")
-        self.addNewUser(self.name, email, self.username, self.password)
+        return [self.name, self.email, self.username, self.password]
         print("\nThanks for creating an account.\n" + "Please proceed to log in \n")
 
     def toString(self):
-        """
-        name: {name}
-        username: {username}
-        email: {email}         
-        password: {password}
-        """.format(name = self.name, username = self.username, email = self.email, password = self.password)
-
-
-
-
-
-
+        print(
+            "\nname: " + self.name,
+            "\nusername: " + self.username,
+            "\nemail: " + self.email,
+            "\npassword: " + self.password
+        )
